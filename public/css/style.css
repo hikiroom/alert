@@ -64,21 +64,6 @@ heading
 /* ----------------------------------------
 list
 ---------------------------------------- */
-/* global-nav */
-.list_global-nav ul {
-    display: flex;
-    align-items: center;
-    list-style: none;
-}
-.list_global-nav a {
-    color: var(--white);
-    text-decoration: none;
-}
-.list_global-nav a:hover,
-.list_global-nav a:active,
-.list_global-nav a:focus {
-    opacity: .6;
-}
 /* info */
 .list_info > div {
     display: flex;
