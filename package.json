@@ -4,7 +4,7 @@
   "description": "誰かが抱えているアラートを即座に検知するためのアプリ",
   "main": "index.js",
   "scripts": {
-    "start": "node index,js"
+    "start": "node index.js"
   },
   "author": "hikikomori",
   "license": "MIT",
