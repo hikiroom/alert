@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Alert!!!</title>
+<link href="/css/style.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+<script src="/socket.io/socket.io.js" defer></script>
+<script src="/js/index.js" defer></script>
+</head>
+<body>
+    <header class="str_header">
+        <h1 class="hdg_logo">Alert!!!</h1>
+        <nav class="list_global-nav">
+            <ul>
+                <li><a href="#">Github</a></li>
+            </ul>
+        </nav>
+    <!-- /.str_header --></header>
+
+    <main class="str_main">
+        <div class="lyt">
+            <div class="box_white">
+                <h2 class="hdg_primary">My Alert.</h2>
+                <div id="my-alert-list" class="box_alert-list"></div>
+                <a class="btn_text js_modal" href="#create-alert-modal">Create Alert</a>
+            <!-- /.box_white --></div>
+
+            <div id="create-alert-modal" class="box_modal">
+                <div class="box_modal__inr">
+                    <div class="box_white js_form">
+                        <h2 class="hdg_primary">Create Alert.</h2>
+                        <div class="form_label">
+                            <label for="alert-name">Name.</label>
+                            <input id="alert-name" class="form_text js_form__input" type="text" placeholder="My Alert">
+                            <p class="form_text__err"><strong>Please input name.</strong></p>
+                        <!-- /.form_label --></div>
+                        <button class="btn_primary js_form__submit" type="button" disabled data-submit-type="create">Create</button>
+                        <button class="btn_close js_modal__close" type="button"><span class="btn_close__alt">Close</span></button>
+                    <!-- /.box_white --></div>
+                <!-- /.box_modal__inr --></div>
+            <!-- /.box_modal --></div>
+        <!-- /.lyt --></div>
+
+        <div class="lyt">
+            <div class="box_white">
+                <h2 class="hdg_primary">Watching Alert.</h2>
+                <div id="watching-alert-list" class="box_alert-list"></div>
+                <a class="btn_text js_modal" href="#search-alert-modal">Add Alert</a>
+            <!-- /.box_white --></div>
+
+            <div id="search-alert-modal" class="box_modal">
+                <div class="box_modal__inr">
+                    <div class="box_white js_form">
+                        <h2 class="hdg_primary">Add Alert.</h2>
+                        <div class="form_label">
+                            <label for="alert-id">Alert ID.</label>
+                            <input id="alert-id" class="form_text js_form__input" type="text" placeholder="a0123456...">
+                            <p class="form_text__err"><strong>Doesn't exist this ID.</strong></p>
+                        <!-- /.form_label --></div>
+                        <button class="btn_primary js_form__submit" type="button" disabled data-submit-type="add">Add</button>
+                        <button class="btn_close js_modal__close" type="button"><span class="btn_close__alt">Close</span></button>
+                    <!-- /.box_white --></div>
+                <!-- /.box_modal__inr --></div>
+            <!-- /.box_modal --></div>
+        <!-- /.lyt --></div>
+    <!-- /.str_main --></main>
+
+    <template class="js_alert">
+        <div class="box_blue js_alert__content">
+            <dl class="list_info">
+                <div class="list_info__name">
+                    <dt>Name</dt>
+                    <dd class="js_alert__name"></dd>
+                <!-- /.list_info__name --></div>
+                <div class="list_info__state">
+                    <dt>State</dt>
+                    <dd class="js_alert__state"></dd>
+                <!-- /.list_info__state --></div>
+                <div class="list_info__id">
+                    <dt>ID</dt>
+                    <dd class="js_alert__id"></dd>
+                <!-- /.list_info__id --></div>
+            <!-- /.list_info --></dl>
+            <button class="btn_secondary js_alert__toggle-state" type="button">Toggle state</button>
+            <button class="btn_secondary is_danger js_alert__delete" type="button">Delete</button>
+        <!-- /.box_blue --></div>
+    </template>
+</body>
+</html>

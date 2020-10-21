@@ -1,0 +1,15 @@
+{
+  "name": "alert",
+  "version": "1.0.0",
+  "description": "誰かが抱えているアラートを即座に検知するためのアプリ",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index,js"
+  },
+  "author": "hikikomori",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.17.1",
+    "socket.io": "^2.3.0"
+  }
+}
